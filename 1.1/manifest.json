@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Image Size Inspector",
+  "version": "1.1",
+  "description": "Right-click on images to see their intrinsic and rendered dimensions",
+  "permissions": [
+    "contextMenus",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "128": "icon128.png"
+  }
+}
